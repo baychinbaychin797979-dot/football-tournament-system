@@ -1,3 +1,5 @@
+version: "3.9"
+
 services:
   db:
     image: mysql:5.7
@@ -49,6 +51,18 @@ services:
     working_dir: /var/www/html
     entrypoint: ["/bin/sh", "-c"]
     command: ["while true; do sleep 3600; done"]
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: wp_phpmyadmin
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8081:80" # đổi port để không trùng với WordPress
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
 
 volumes:
   db_data:
