@@ -129,7 +129,6 @@ return isset($scores[$idx]) && $scores[$idx] !== null ? (string)$scores[$idx] : 
     .tab {
         flex: 0 0 auto;
         padding: 8px 14px;
-        background: var(--card);
         border-radius: 5px;
         text-decoration: none;
         color: var(--text);
@@ -140,6 +139,7 @@ return isset($scores[$idx]) && $scores[$idx] !== null ? (string)$scores[$idx] : 
         border: 1px solid var(--border);
         transition: all .18s ease;
         white-space: nowrap;
+        background-color: #f1f1f1;
     }
 
     .tab:hover {
@@ -161,8 +161,8 @@ return isset($scores[$idx]) && $scores[$idx] !== null ? (string)$scores[$idx] : 
     }
 
     .country-header {
-        background: #fff;
-        border-left: 4px solid var(--accent);
+        background: #f1f1f1;
+        border-left: 2px solid var(--accent);
         padding: 10px 12px;
         font-size: 15px;
         font-weight: 700;
@@ -187,6 +187,7 @@ return isset($scores[$idx]) && $scores[$idx] !== null ? (string)$scores[$idx] : 
     }
 
     .comp-title {
+        font-size: 14px;
         padding: 10px 12px;
         display: flex;
         gap: 10px;
@@ -257,10 +258,12 @@ return isset($scores[$idx]) && $scores[$idx] !== null ? (string)$scores[$idx] : 
     }
 
     .team-name {
-        font-weight: 600;
+        font-weight: 400;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        color: #222;
+        font-size: 14px;
     }
 
     .score {
@@ -316,8 +319,6 @@ return isset($scores[$idx]) && $scores[$idx] !== null ? (string)$scores[$idx] : 
         gap: 8px;
         font-weight: 600;
         transition: all 0.3s ease;
-        /* color: #fff !important;
-        background: var(--accent); */
     }
 
     /* Badge LIVE nhấp nháy */
