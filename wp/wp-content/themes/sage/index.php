@@ -154,8 +154,6 @@ return isset($scores[$idx]) && $scores[$idx] !== null ? (string)$scores[$idx] : 
         box-shadow: 0 6px 18px rgba(211, 47, 47, 0.12);
     }
 
-
-
     .country {
         margin-top: 20px;
     }
@@ -194,7 +192,6 @@ return isset($scores[$idx]) && $scores[$idx] !== null ? (string)$scores[$idx] : 
         align-items: center;
         font-weight: 700;
         border-bottom: 1px solid var(--border);
-        background: #fafafa;
     }
 
     .comp-title img {
@@ -251,8 +248,8 @@ return isset($scores[$idx]) && $scores[$idx] !== null ? (string)$scores[$idx] : 
     }
 
     .team img {
-        width: 30px;
-        height: 30px;
+        width: 26px;
+        height: 26px;
         border-radius: 4px;
         object-fit: cover;
     }
@@ -280,38 +277,6 @@ return isset($scores[$idx]) && $scores[$idx] !== null ? (string)$scores[$idx] : 
         color: var(--muted);
     }
 
-    /* MOBILE RESPONSIVE */
-
-    @media (max-width: 700px) {
-
-        .match-row {
-            padding: 10px 6px;
-        }
-
-        .left {
-            width: 55px;
-        }
-
-        .team img {
-            width: 24px;
-            height: 24px;
-        }
-
-        .score {
-            min-width: 50px;
-            font-size: 15px;
-        }
-
-        .comp-title {
-            padding: 8px;
-            font-size: 14px;
-        }
-
-        .country-header {
-            font-size: 14px;
-        }
-    }
-
     .live-tab {
         position: relative;
         display: inline-flex;
@@ -321,7 +286,6 @@ return isset($scores[$idx]) && $scores[$idx] !== null ? (string)$scores[$idx] : 
         transition: all 0.3s ease;
     }
 
-    /* Badge LIVE nhấp nháy */
     .live-badge {
         background: #ff0000;
         color: white;
@@ -339,7 +303,6 @@ return isset($scores[$idx]) && $scores[$idx] !== null ? (string)$scores[$idx] : 
         animation: badgePulse 1.5s infinite;
     }
 
-    /* Vòng tròn đỏ nhấp nháy */
     .live-dot {
         width: 18px;
         height: 18px;
@@ -351,12 +314,10 @@ return isset($scores[$idx]) && $scores[$idx] !== null ? (string)$scores[$idx] : 
         filter: brightness(0) invert(1);
     }
 
-    /* Hiệu ứng số lượng người đang xem */
     .live-count-number {
         animation: countFlicker 3s infinite;
     }
 
-    /* Keyframes */
     @keyframes liveBlink {
         0% {
 
@@ -399,6 +360,50 @@ return isset($scores[$idx]) && $scores[$idx] !== null ? (string)$scores[$idx] : 
 
         50% {
             opacity: 0.7;
+        }
+    }
+
+    /* MOBILE RESPONSIVE */
+
+    @media (max-width: 700px) {
+        .match-row {
+            display: grid;
+            gap: 15px;
+        }
+
+        .center {
+            justify-content: start;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .team-name {
+            font-size: 12px;
+        }
+
+        .team {
+            display: block;
+            text-align: center;
+        }
+
+        .team img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .left {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            width: 80px;
+        }
+
+        .score-ht {
+            text-align: center;
+        }
+
+        .center {
+            justify-content: center;
         }
     }
     </style>
