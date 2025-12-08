@@ -7,8 +7,9 @@ class CountriesSeeder extends Seeder
     public function run()
     {
         DB::table('countries')->insert([
-            ['id' => 'c1','name' => 'Country One','logo' => ''],
-            ['id' => 'c2','name' => 'Country Two','logo' => ''],
+            ['id' => 'dz','name' => 'Algeria','logo' => 'https://flagcdn.com/dz.svg'],
+            ['id' => 'in','name' => 'India','logo' => 'https://flagcdn.com/in.svg'],
+            ['id' => 'bd','name' => 'Bangladesh','logo' => 'https://flagcdn.com/bd.svg'],
         ]);
     }
 }
