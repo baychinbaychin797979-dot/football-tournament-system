@@ -1,0 +1,26 @@
+{
+  "name": "football-demo-project",
+  "version": "1.0.0",
+  "description": "Football Demo API và Frontend với Docker",
+  "scripts": {
+    "start": "docker-compose up -d",
+    "stop": "docker-compose down",
+    "restart": "docker-compose restart",
+    "build": "docker-compose build",
+    "rebuild": "docker-compose down && docker-compose build && docker-compose up -d",
+    "logs": "docker-compose logs -f",
+    "logs:api": "docker logs -f football_api",
+    "logs:frontend": "docker logs -f football_frontend",
+    "clean": "docker-compose down -v"
+  },
+  "keywords": [
+    "football",
+    "api",
+    "docker",
+    "demo",
+    "nodejs",
+    "express"
+  ],
+  "author": "",
+  "license": "MIT"
+}
